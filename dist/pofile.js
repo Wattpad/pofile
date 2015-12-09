@@ -1,6 +1,4 @@
-require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"pofile":[function(require,module,exports){
-module.exports=require('W8CkM0');
-},{}],"W8CkM0":[function(require,module,exports){
+require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);throw new Error("Cannot find module '"+o+"'")}var f=n[o]={exports:{}};t[o][0].call(f.exports,function(e){var n=t[o][1][e];return s(n?n:e)},f,f.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"0qYTw9":[function(require,module,exports){
 var fs = require('fs');
 var isArray = require('lodash.isarray');
 
@@ -161,6 +159,8 @@ PO.parse = function (data) {
                     return '\f';
                 case 'r':
                     return '\r';
+                case '\'':
+                    return '\\\'';
                 default:
                     return esc;
             }
@@ -341,7 +341,9 @@ PO.Item.prototype.toString = function () {
 
 module.exports = PO;
 
-},{"fs":3,"lodash.isarray":4}],3:[function(require,module,exports){
+},{"fs":3,"lodash.isarray":4}],"pofile":[function(require,module,exports){
+module.exports=require('0qYTw9');
+},{}],3:[function(require,module,exports){
 
 },{}],4:[function(require,module,exports){
 /**
@@ -426,4 +428,4 @@ function isNative(value) {
 
 module.exports = isNative;
 
-},{}]},{},["W8CkM0"])
+},{}]},{},["0qYTw9"])
